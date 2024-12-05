@@ -21,16 +21,6 @@ jobs:
             target: x86_64-unknown-linux-gnu
             bin: ak_monitor_client_rs
             command: build
-          - release_for: netbsd_x86_64
-            os: ubuntu-latest
-            target: x86_64-unknown-netbsd
-            bin: ak_monitor_client_rs
-            command: build
-          - release_for: freebsd_x86_64
-            os: ubuntu-latest
-            target: x86_64-unknown-freebsd
-            bin: ak_monitor_client_rs
-            command: build
           - release_for: linux_arm_gnueabi
             os: ubuntu-latest
             target: arm-unknown-linux-gnueabi
