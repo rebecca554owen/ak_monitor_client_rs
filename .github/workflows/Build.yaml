@@ -15,7 +15,71 @@ jobs:
             os: ubuntu-latest
             target: x86_64-unknown-linux-musl
             bin: ak_monitor_client_rs
-            name: ak_monitor_client_rs-linux-x86_64.tar.gz
+            command: build
+          - release_for: linux_x86_64_gnu
+            os: ubuntu-latest
+            target: x86_64-unknown-linux-gnu
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: netbsd_x86_64
+            os: ubuntu-latest
+            target: x86_64-unknown-netbsd
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: freebsd_x86_64
+            os: ubuntu-latest
+            target: x86_64-unknown-freebsd
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: apple_darwin_x86_64
+            os: macos-latest
+            target: x86_64-apple-darwin
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: apple_darwin_aarch64
+            os: macos-latest
+            target: aarch64-apple-darwin
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_arm_gnueabi
+            os: ubuntu-latest
+            target: arm-unknown-linux-gnueabi
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_arm_gnueabihf
+            os: ubuntu-latest
+            target: arm-unknown-linux-gnueabihf
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_aarch64_gnu
+            os: ubuntu-latest
+            target: aarch64-unknown-linux-gnu
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_aarch64_musl
+            os: ubuntu-latest
+            target: aarch64-unknown-linux-musl
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_i586_gnu
+            os: ubuntu-latest
+            target: i586-unknown-linux-gnu
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_i686_gnu
+            os: ubuntu-latest
+            target: i686-unknown-linux-gnu
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_i686_musl
+            os: ubuntu-latest
+            target: i686-unknown-linux-musl
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_i586_musl
+            os: ubuntu-latest
+            target: i586-unknown-linux-musl
+            bin: ak_monitor_client_rs
             command: build
 
     runs-on: ${{ matrix.platform.os }}
