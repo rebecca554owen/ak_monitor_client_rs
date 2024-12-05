@@ -32,12 +32,12 @@ jobs:
             bin: ak_monitor_client_rs
             command: build
           - release_for: apple_darwin_x86_64
-            os: macos-latest
+            os: ubuntu-latest
             target: x86_64-apple-darwin
             bin: ak_monitor_client_rs
             command: build
           - release_for: apple_darwin_aarch64
-            os: macos-latest
+            os: ubuntu-latest
             target: aarch64-apple-darwin
             bin: ak_monitor_client_rs
             command: build
@@ -87,7 +87,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Lib
-        run: sudo apt update && sudo apt install -y protobuf-compiler musl-tools musl-dev musl
+        run: sudo apt update && sudo apt install -y musl-tools musl-dev musl
       - name: Build binary
         uses: houseabsolute/actions-rust-cross@v0
         with:
