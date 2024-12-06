@@ -61,6 +61,57 @@ jobs:
             target: i586-unknown-linux-musl
             bin: ak_monitor_client_rs
             command: build
+          - release_for: linux_arm_gnueabi
+            os: ubuntu-latest
+            target: arm-unknown-linux-gnueabi
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_arm_gnueabihf
+            os: ubuntu-latest
+            target: arm-unknown-linux-gnueabihf
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_arm_musleabi
+            os: ubuntu-latest
+            target: arm-unknown-linux-musleabi
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_arm_musleabihf
+            os: ubuntu-latest
+            target: arm-unknown-linux-musleabihf
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_armv5te_gnu
+            os: ubuntu-latest
+            target: armv5te-unknown-linux-gnueabi
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_armv5te_musl
+            os: ubuntu-latest
+            target: armv5te-unknown-linux-musleabi
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_armv7_gnueabi
+            os: ubuntu-latest
+            target: armv7-unknown-linux-gnueabi
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_armv7_gnueabihf
+            os: ubuntu-latest
+            target: armv7-unknown-linux-gnueabihf
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_armv7_musleabi
+            os: ubuntu-latest
+            target: armv7-unknown-linux-musleabi
+            bin: ak_monitor_client_rs
+            command: build
+          - release_for: linux_armv7_musleabihf
+            os: ubuntu-latest
+            target: armv7-unknown-linux-musleabihf
+            bin: ak_monitor_client_rs
+            command: build
+
 
     runs-on: ${{ matrix.platform.os }}
     steps:
