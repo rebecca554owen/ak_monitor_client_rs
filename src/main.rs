@@ -4,7 +4,6 @@ mod get_info;
 mod model;
 
 use futures_util::{SinkExt, StreamExt};
-use std::io::Write;
 use log::{debug, info};
 use tokio_tungstenite::{connect_async, tungstenite::protocol::Message};
 
@@ -28,7 +27,7 @@ async fn main() {
     info!("自动构建 WebSocket URL 为: {}", url_str);
 
     loop {
-        let (mut ws_stream, _) = match connect_async(url_str.clone()).await {
+        let (ws_stream, _) = match connect_async(url_str.clone()).await {
             Ok(s) => s,
             Err(e) => {
                 log::error!("WebSocket 连接失败，5 秒后重试: {}", e);

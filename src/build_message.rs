@@ -25,7 +25,7 @@ pub async fn build_host(name: String, fake_times: u64) -> Host {
     }
 }
 
-pub async fn build_host_state(mut sys: &System, fake_times: u64) -> HostState {
+pub async fn build_host_state(sys: &System, fake_times: u64) -> HostState {
     let cpus = sys.cpus();
     let cpu_usage = get_cpu_usage(cpus).await;
 
